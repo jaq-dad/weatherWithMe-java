@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.weather19.Mapper.WeaMapper">
+    <insert id="save">
+    insert into weather values(#{id},"beijing",#{tem},#{precipitation},#{wind},#{airqu},#{time})
+    </insert>
+    <select id="findTemById" resultType="String">
+    select tem from weather where id = #{id}
+    </select>
+    <select id="findPrecipitationById" resultType="String">
+     select precipitation from weather where id = #{id}
+    </select>
+    <select id="findWindById" resultType="String">
+    select wind from weather where id = #{id}
+    </select>
+    <select id="findAirQuById" resultType="String">
+    select airqu from weather where id = #{id}
+    </select>
+</mapper>
